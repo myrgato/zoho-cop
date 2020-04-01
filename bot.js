@@ -51,7 +51,7 @@ client.on('ready', () => {
   console.log('minutes', { minutes });
 
   const me = members.cache.find(member => member.id === myId);
-  me.send(`Suas horas apontadas até hoje são: ${(minutes/60)}`)
+  me.send(`Suas horas apontadas até hoje são: ${(minutes[0]/60)}`)
 });
 
 client.on('message', message => {
