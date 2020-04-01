@@ -1,0 +1,24 @@
+{
+  "name": "zoho-cop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myrgato/zoho-cop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myrgato/zoho-cop/issues"
+  },
+  "homepage": "https://github.com/myrgato/zoho-cop#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "got": "^10.7.0"
+  }
+}
