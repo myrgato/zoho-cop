@@ -8,7 +8,7 @@ client.on('ready', () => {
   console.log('The bot is up!');
   const { guilds } = client;
   const GUILD = guilds.cache.find(guild => guild.id === '233631043851124736');
-  const { channels } = GUILD;
+  const { channels, members } = GUILD;
 
   const TESTE = channels.cache.find(channel => channel.id === '694979936397557882');
   const myZohoId = '666269802';
@@ -49,6 +49,9 @@ client.on('ready', () => {
     }
   }
   console.log('seconds', { seconds });
+
+  const me = members.cache.find(member => member.id === myId);
+  me.send(`Suas horas apontadas até hoje são: ${(seconds*60)*60}`)
 });
 
 client.on('message', message => {
