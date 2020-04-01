@@ -23,6 +23,6 @@ client.on('message', message => {
   const GUILD = guilds.cache.find(guild => guild.id === '233631043851124736');
   const { channels } = GUILD;
   const TESTE = channels.cache.find(channel => channel.id === '694979936397557882');
-
+  console.log('message', { message });
   if (message === 'hey') TESTE.send('hello!');
 })
