@@ -41,17 +41,17 @@ client.on('ready', () => {
     }
   }
 
-  const seconds = [];
+  const minutes = [];
 
   for (const project of Object.keys(MOCK)) {
     for (const user of Object.keys(MOCK[project])) {
-      if (user === myZohoId) seconds.push(MOCK[project][user]);
+      if (user === myZohoId) minutes.push(MOCK[project][user]);
     }
   }
   console.log('seconds', { seconds });
 
   const me = members.cache.find(member => member.id === myId);
-  me.send(`Suas horas apontadas até hoje são: ${(seconds*60)*60}`)
+  me.send(`Suas horas apontadas até hoje são: ${(seconds/60)}`)
 });
 
 client.on('message', message => {
