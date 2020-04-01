@@ -11,10 +11,38 @@ client.on('ready', () => {
   const { channels } = GUILD;
 
   const TESTE = channels.cache.find(channel => channel.id === '694979936397557882');
-  const myZohoId = '677235755';
+  const myZohoId = '666269802';
   const myId = '140462634272030721';
 
-  got('http://ericktatsui.com.br:3105/').then(response => console.log('response', { response }));
+
+  const MOCK = {
+    '450299000003944141': {
+      '694469826': 90
+    },
+    '450299000002868011': {
+      '666269220': 960,
+      '666269802': 960
+    },
+    '450299000002725367': { 
+      '588380192': 240,
+      '670086224': 180,
+      '684801087': 660,
+      '695658568': 840,
+      '700710023': 870 
+    },
+    '450299000002510011': {
+      '25440764': 90,
+      '588380192': 60,
+      '670086224': 240,
+      '684801087': 120,
+      '686913048': 180,
+      '700710023': 90,
+      '711478147': 180
+    }
+  }
+
+  const SECONDS = MOCK.map(project => project.filter(user => user.id === myZohoId));
+  console.log('seconds', { seconds });
 });
 
 client.on('message', message => {
