@@ -41,7 +41,13 @@ client.on('ready', () => {
     }
   }
 
-  const SECONDS = MOCK.map(project => Object.keys(project).filter(key => key === myZohoId));
+  const seconds = [];
+
+  for (const project of Object.keys(MOCK)) {
+    for (const user of Object.keys(MOCK[project])) {
+      if (user === myZohoId) seconds.push(MOCK[project][user]);
+    }
+  }
   console.log('seconds', { seconds });
 });
 
